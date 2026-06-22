@@ -7,7 +7,7 @@ console.log("Hello world!")
 /************************
 Variables 
 ************************/
-const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+const OUTPUT = document.getElementById("JavaScript");
 let shoppingList = [];
 
 /************************
