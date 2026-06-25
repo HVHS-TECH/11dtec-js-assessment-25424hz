@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-  <title>Term 2 JavaScript Assessment</title>
+  <img src="Images/favicon.png" alt="logo" width=10%>
+  <title>Shed of Light</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- stylesheets *******************************************-->
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="../assets/dtec_favicon.png">
+  <link rel="icon" type="image/png" href="Images/favicon.png">
 </head>
 
 <!--*************************************************************
@@ -16,17 +17,24 @@
 **************************************************************-->
 
 <body>
-  <h1>Term 2 JavaScript Assessment</h1>
+  <h1>Shed of Light</h1>
   
   <form onsubmit="return false;">
-      <label for="formName">What is your name?</label><br>
+      <label for="formName">How would you like to be called?</label><br>
       <input type="text" id="nameField" name="formName">
-      <input type="submit" value="SUBMIT" onclick=getFormInput()><br>
+      <input type="submit" value="SUBMIT" onclick=nameInput()><br>
       <label for="formShop">Shopping List</label><br>
       <input type="text" id="shopField" name="formShop" value="crackers">
       <input type="submit" value="ADD" onclick=addShopping()>
   </form><br>
   <button onclick="start()">START</button>
+
+  <nav>
+    <a href="muffin.html">Muffin</a>
+    <a href="coffee.html">Coffee</a>
+    <a href="fruit_wine.html">Fruit Wine</a>
+    <a href="croissant.html">Croissant</a>
+  </nav>
   
   <div id="JavaScript">
 

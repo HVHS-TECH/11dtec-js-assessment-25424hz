@@ -19,9 +19,10 @@ OUTPUT.innerHTML = "This is the output from JavaScript!";
 /*************************
 Functions 
 ************************/ 
-function getFormInput() {
+function nameInput() {
     const NAME_FIELD = document.getElementById("nameField");
     let userName = NAME_FIELD.value;
+    OUTPUT.innerHTML = "Welcome to the Shed of Light, <b>" + userName + "</b>!<br>"; 
 }
 
 function addShopping(){
@@ -34,3 +35,4 @@ function addShopping(){
     } 
     OUTPUT.innerHTML += "<br>";
 }
+
