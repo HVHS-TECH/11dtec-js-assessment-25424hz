@@ -9,12 +9,15 @@ Variables
 ************************/
 const OUTPUT = document.getElementById("JavaScript");
 let shoppingList = [];
+let muffinList = ["chocolate", "blueberry", "banana", "strawberry", "cinnamon"];
+let croissantList = ["chocolate", "almond", "plain", "cheese", "ham"];
+let coffeeList = ["latte", "cappuccino", "americano", "espresso", "mocha"];
+let fruit_wineList = ["apple", "grape","passionfruit", "fig", "grapefruit"];
 
 /************************
  Main Code
 ************************/
-OUTPUT.innerHTML = "This is the output from JavaScript!";
-
+OUTPUT.innerHTML = "<h2>Coffee</h2>";
 
 /*************************
 Functions 
