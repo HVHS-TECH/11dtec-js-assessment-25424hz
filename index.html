@@ -20,7 +20,7 @@
     <div>
       <form onsubmit="return false;">
         <label for="formName">How would you like to be called?</label>
-        <input type="text" id="nameField" name="formName">
+        <input type="text" id="nameField" name="formName" required>
         <input type="submit" value="SUBMIT" onclick=nameInput()>
       </form>
     </div>
@@ -46,7 +46,7 @@
   <main>
     <form onsubmit="return false;">
       <label for="formShop">Shopping List</label><br>
-      <input type="text" id="shopField" name="formShop" value="crackers">
+      <input type="text" id="shopField" name="formShop" required>
       <input type="submit" value="ADD" onclick=addShopping()>
     </form><br>
     <div id="goods">
