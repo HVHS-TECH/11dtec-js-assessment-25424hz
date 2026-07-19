@@ -9,15 +9,15 @@ Variables
 ************************/
 const OUTPUT = document.getElementById("JavaScript");
 let shoppingList = [];
-let muffinList = ["chocolate", "blueberry", "banana", "strawberry", "cinnamon"];
-let croissantList = ["chocolate", "almond", "plain", "cheese", "ham"];
-let coffeeList = ["latte", "cappuccino", "americano", "espresso", "mocha"];
-let fruit_wineList = ["apple", "grape","passionfruit", "fig", "grapefruit"];
+const MUFFIN_LIST = ["plain","chocolate", "blueberry", "banana", "strawberry", "cinnamon"];
+const CROISSANT_LIST = ["chocolate", "almond", "plain", "cheese", "ham"];
+const COFFEE_LIST = ["latte", "cappuccino", "americano", "espresso"];
+const FRUIT_WINE_LIST = ["apple", "grape", "passionfruit", "fig", "grapefruit"];
 
 /************************
  Main Code
 ************************/
-OUTPUT.innerHTML = "<h2>Coffee</h2>";
+OUTPUT.innerHTML = "<h2>Best Recommended! ↖(^ω^)↗</h2>";
 
 /*************************
 Functions 
