@@ -18,7 +18,7 @@
 <body>
   <div class="beyond">
     <div>
-      <form onsubmit="return false;">
+      <form id="welcomeForm" onsubmit="return false;">
         <label for="formName">How would you like to be called?</label>
         <input type="text" id="nameField" name="formName" required>
         <input type="submit" value="SUBMIT" onclick=nameInput()>
@@ -46,7 +46,7 @@
       </div>
     </div>
   </header>
-  
+
   <main>
     <!--***
     <form onsubmit="return false;">
@@ -57,12 +57,13 @@
     ***-->
 
     <div id="JavaScript">
+      <button id="more" class="more" onclick="more()">More</button>
 
-      <img src="Images/coffee/latte.jpeg" id= "goodCoffee" alt="goodCoffee" width=50%>
-      <img src="Images/croissant/ham&cheese.jpg" id="goodCroissant" alt="goodCroissant" width=50%>
-      <img src="Images/muffin/choc.jpg" id="goodMuffin" alt="goodMuffin" width=50%>
-      <img src="Images/wine/apple.jpeg" id="goodFruitWine" alt="goodFruitWine" width=50%>
+      <form id="orderForm" onsubmit="return false;">
 
+      </form>
+      <button class="plus" onclick="plus">+</button>
+      <button class="minus" onclick="minus">-</button>
     </div>
   </main>
 

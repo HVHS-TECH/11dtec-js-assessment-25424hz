@@ -28,9 +28,9 @@ body {
     margin-left: auto;
     justify-content: flex-end;
 }
-
 .beyond img {
-    width: 7%;
+    width: 5%;
+    cursor: pointer;
 }
 
 header {
@@ -44,7 +44,6 @@ header {
     background-color: #ffefb0;
     color: #4a3720;
 }
-
 .header image {
     width: 20vw;
 }
@@ -58,11 +57,17 @@ header {
 
 #trolly {
     width: 8vw;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+#trolly:hover {
+    transform:scale(1.1);
 }
 
 .dropdown {
     position: relative;
     font-size: 8vw;
+    cursor: pointer;
 }
 
 .dropdown-content {
@@ -82,7 +87,7 @@ header {
     text-decoration: none;
     color: #4a3720;
     padding: 1vw 1.2vw;
-     white-space: nowrap;
+    white-space: nowrap;
 }
 
 .dropdown-content a:hover {
@@ -95,15 +100,32 @@ header {
     flex-direction: column;
 }
 
-main {
+#JavaScript {
+    display: grid; 
     margin: 1%;
     padding: 1%;
-    display: grid;
+    gap: 0% 1%;
     background-color: #ffefb0;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(10, auto);
+    grid-template-rows: repeat(8, minmax(1vw, auto));
 }
-
+.halfWidth {
+    grid-row: 2;
+    width: 18vw;
+    border: 3px solid #a16900;
+    border-radius: 10px;
+}
+.title {
+    grid-row: 1;
+    grid-column: 1 / span 4;
+    text-align: left;
+}
+.foodName {
+    grid-row:3;
+}
+.description {
+    grid-row: 4;
+}
 
 .more {
     margin: 1px 20px;
@@ -114,8 +136,18 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     text-align: center;
+    grid-row: 6;
+    grid-column: 2 / span 2;
     color: rgb(187, 86, 13);
-    transition: transform 0.3s, background-color 0.5s, color 0.5s;
+    transition: transform 0.3s;
+}
+.more:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.plus, .minus {
+    display: inline-block;
+
 }
 
 footer {
