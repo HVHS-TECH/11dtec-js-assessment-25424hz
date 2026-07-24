@@ -17,14 +17,19 @@
 
 <body>
   <div class="beyond">
-    <div>
+    <div class="headForm">
       <form id="welcomeForm" onsubmit="return false;">
         <label for="formName">How would you like to be called?</label>
         <input type="text" id="nameField" name="formName" required>
-        <input type="submit" value="SUBMIT" onclick=nameInput()>
+        <input type="submit" onclick=nameInput()>
+      </form><br>
+      <form id="balanceForm" onsubmit="return false;">
+        <label for="formBalance">Enter your balance:</label>
+        <input type="number" id="balanceField" name="formBalance" min="0" max="999999" required>
+        <input type="submit" onclick="balanceInput()">
       </form>
     </div>
-    <div id="socials">
+    <div class="socials">
       <img src='Images/Ins.png' alt='ins'>
       <img src="Images/Facebook.webp" alt="facebook">
       <img src="Images/tiktok.png" alt="tiktok">
@@ -32,10 +37,10 @@
   </div>
 
   <header>
-    <img src='Images/favicon.png' alt='logo' width=10%>
+    <a href="index.html"><img src='Images/favicon.png' alt='logo'></a>
     <h1>Shed of Light</h1>
     <div class="topRight">
-      <img id="trolly" src="Images/trolly.png" alt="trolly" width=10%>
+      <a href="order.html"><img id="trolly" src="Images/trolly.png" alt="trolly" width=10%></a>
       <div class="dropdown">≣
         <nav class="dropdown-content">
           <a href="muffin.html">Muffin</a>
@@ -48,26 +53,47 @@
   </header>
 
   <main>
-    <!--***
-    <form onsubmit="return false;">
-      <label for="formShop">Shopping List</label><br>
-      <input type="text" id="shopField" name="formShop" required>
-      <input type="submit" value="ADD" onclick=addShopping()>
-    </form><br>
-    ***-->
 
     <div id="JavaScript">
-      <button id="more" class="more" onclick="more()">More</button>
-
-      <form id="orderForm" onsubmit="return false;">
-
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formLatte"></label>
+        <input type="number" id="coffee1Qty" name="formLatte" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Morning Mist',COFFEE_PRICE[0],'coffee1Qty')">
       </form>
-      <button class="plus" onclick="plus">+</button>
-      <button class="minus" onclick="minus">-</button>
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formCroissant"></label>
+        <input type="number" id="croissant5Qty" name="formCroissant" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Morning Savour',CROISSANT_PRICE[4],'croissant5Qty')">
+      </form>
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formMuffin"></label>
+        <input type="number" id="muffin2Qty" name="formMuffin" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Midnight Cocoa',MUFFIN_PRICE[1],'muffin2Qty')">
+      </form>
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formWine"></label>
+        <input type="number" id="wine1Qty" name="formWine" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Golden Orchard',FRUIT_WINE_PRICE[0],'wine1Qty')">
+      </form>
+
+      <a href="coffee.html" class="more">More Coffee</a>
+      <a href="croissant.html" class="more">More Croissant</a>
+      <a href="muffin.html" class="more">More muffin</a>
+      <a href="fruitWine.html" class="more">More Fruit Wine</a>
     </div>
+
+
   </main>
+<div class="order">
+  <h2>Your Order</h2>
+  <button onclick="receipt()">Click to Get Your Receipt</button>
+  <button onclick="clearAll()">Clear All Your Order</button>
+  <div id="order"></div> 
+</div>
+ 
 
   <footer>
+    <h4>Images From</h4>
     <p>https://www.allrecipes.com/recipe/228553/moist-chocolate-muffins/</p>
     <p>https://stpierrebakery.com/recipes/croissant/ham-cheese/</p>
     <p>https://en.wikipedia.org/wiki/Latte</p>
