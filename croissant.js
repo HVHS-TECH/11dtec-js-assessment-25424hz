@@ -7,8 +7,7 @@ console.log("Hello world!")
 /************************
 Variables 
 ************************/
-const OUTPUT = document.getElementById("JavaScript");
-const WELCOME_FORM = document.getElementById("welcomeForm");
+const OUTPUT = document.getElementById("croissantScript");
 const NAME_FIELD = document.getElementById("nameField");
 const BALANCE_FORM = document.getElementById("balanceForm");
 const BALANCE_FIELD = document.getElementById("balanceField");
@@ -16,35 +15,34 @@ const ORDER = document.getElementById("order");
 let shoppingList = [];
 let userName;
 let userBalance;
-const MUFFIN_LIST = ["plain", "chocolate", "blueberry", "banana", "cinnamon"];
-const MUFFIN_PRICE = ["5.49", "6.19", "6.49", "5.89", "5.79"];
-const COFFEE_LIST = ["latte", "cappuccino", "americano", "espresso"];
-const COFFEE_PRICE = ["7.19", "6.99", "5.99", "4.29"];
-const FRUIT_WINE_LIST = ["apple", "grape", "passionfruit", "fig", "grapefruit"];
-const FRUIT_WINE_PRICE = ["11.59", "11.99", "11.79", "13.49", "11.49"];
+const CROISSANT_LIST = ["chocolate", "almond", "plain", "cheese", "ham"];
+const CROISSANT_PRICE = ["6.79", "7.19", "5.79", "6.79", "6.99"];
 
 let total = 0;
 
 /************************
  Main Code
 ************************/
-OUTPUT.innerHTML += "<h2 class='title'>Best Recommended! ↖(^ω^)↗</h2>";
-OUTPUT.innerHTML += "<img src='Images/coffee/latte.jpeg' id='coffee4' class='halfWidth' alt='latte'>";
-OUTPUT.innerHTML += "<img src='Images/croissant/ham&cheese.jpg' id='croissant5' class='halfWidth' alt='ham&cheese'>";
-OUTPUT.innerHTML += "<img src='Images/muffin/choc.jpg' id='muffin3' class='halfWidth' alt='goodMuffin'>";
-OUTPUT.innerHTML += "<img src='Images/wine/apple.png' id='wine1' class='halfWidth' alt='goodFruitWine'>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Latte - Morning Mist</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Croissant - Morning Savour</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Muffin - Midnight Cocoa</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Fruit Wine - Golden Orchard</h3>";
-OUTPUT.innerHTML += "<p class='description'>Smooth espresso blended with silky steamed milk, creating a rich, creamy coffee with a velvety finish.</p>";
-OUTPUT.innerHTML += "<p class='description'>Tender smoked ham nestled in buttery pastry for a warm and satisfying savoury bite.</p>";
-OUTPUT.innerHTML += "<p class='description'>Rich cocoa and melted chocolate folded into a moist muffin for an indulgent treat.</p>";
-OUTPUT.innerHTML += "<p class='description'>Light and refreshing with crisp apple notes and a smooth, delicate finish.</p>";
-price(COFFEE_PRICE[0]);
+OUTPUT.innerHTML += "<img src='Images/croissant/choc.jpg' id='croissant1' class='halfWidth' alt='chocolate'>";
+OUTPUT.innerHTML += "<img src='Images/croissant/almond.jpg' id='croissant2' class='halfWidth' alt='almond'>";
+OUTPUT.innerHTML += "<img src='Images/croissant/plain.webp' id='croissant3' class='halfWidth' alt='plain'>";
+OUTPUT.innerHTML += "<img src='Images/croissant/cheese.webp' id='coffee4' class='halfWidth' alt='cheese'>";
+OUTPUT.innerHTML += "<img src='Images/croissant/ham&cheese.jpg' id='coffee5' class='halfWidth' alt='ham&cheese'>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Chocolate - Parisian Midnight</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Almond - Almond Whisper</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Plain - Golden Layers</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Cheese - Cream & Crust</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Ham & Cheese - Morning Savour</h3>";
+OUTPUT.innerHTML += "<p class='description'>Filled with smooth melted chocolate inside perfectly laminated buttery pastry.</p>";
+OUTPUT.innerHTML += "<p class='description'>Filled with sweet almond cream and topped with toasted sliced almonds for extra crunch.</p>";
+OUTPUT.innerHTML += "<p class='description'>Buttery, flaky layers baked to golden perfection with a crisp, delicate finish.</p>";
+OUTPUT.innerHTML += "<p class='description'>Flaky pastry wrapped around rich, creamy cheese and baked until beautifully golden.</p>";
+OUTPUT.innerHTML += "<p class='description'>Tender smoked ham nestled in buttery pastry for a warm and satisfying savoury bite.</p>"
+price(CROISSANT_PRICE[0]);
+price(CROISSANT_PRICE[1]);
+price(CROISSANT_PRICE[2]);
+price(CROISSANT_PRICE[3]);
 price(CROISSANT_PRICE[4]);
-price(MUFFIN_PRICE[2]);
-price(FRUIT_WINE_PRICE[0]);
 
 /*************************
 Functions 

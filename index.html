@@ -20,7 +20,7 @@
     <div class="headForm">
       <form id="welcomeForm" onsubmit="return false;">
         <label for="formName">How would you like to be called?</label>
-        <input type="text" id="nameField" name="formName" required>
+        <input type="text" id="nameField" name="formName" minlength="3" required autofocus>
         <input type="submit" onclick=nameInput()>
       </form><br>
       <form id="balanceForm" onsubmit="return false;">
@@ -40,7 +40,6 @@
     <a href="index.html"><img src='Images/favicon.png' alt='logo'></a>
     <h1>Shed of Light</h1>
     <div class="topRight">
-      <a href="order.html"><img id="trolly" src="Images/trolly.png" alt="trolly" width=10%></a>
       <div class="dropdown">≣
         <nav class="dropdown-content">
           <a href="muffin.html">Muffin</a>
@@ -54,25 +53,25 @@
 
   <main>
 
-    <div id="JavaScript">
+    <div class="script" id="JavaScript">
       <form class="orderForm" onsubmit="return false;">
         <label for="formLatte"></label>
         <input type="number" id="coffee1Qty" name="formLatte" value="0" min="1" max="999" required>
         <input type="submit" value="ADD" onclick="addOrder('Morning Mist',COFFEE_PRICE[0],'coffee1Qty')">
       </form>
       <form class="orderForm" onsubmit="return false;">
-        <label for="formCroissant"></label>
-        <input type="number" id="croissant5Qty" name="formCroissant" value="0" min="1" max="999" required>
+        <label for="formCroissant5"></label>
+        <input type="number" id="croissant5Qty" name="formCroissant5" value="0" min="1" max="999" required>
         <input type="submit" value="ADD" onclick="addOrder('Morning Savour',CROISSANT_PRICE[4],'croissant5Qty')">
       </form>
       <form class="orderForm" onsubmit="return false;">
-        <label for="formMuffin"></label>
-        <input type="number" id="muffin2Qty" name="formMuffin" value="0" min="1" max="999" required>
+        <label for="formMuffin2"></label>
+        <input type="number" id="muffin2Qty" name="formMuffin2" value="0" min="1" max="999" required>
         <input type="submit" value="ADD" onclick="addOrder('Midnight Cocoa',MUFFIN_PRICE[1],'muffin2Qty')">
       </form>
       <form class="orderForm" onsubmit="return false;">
-        <label for="formWine"></label>
-        <input type="number" id="wine1Qty" name="formWine" value="0" min="1" max="999" required>
+        <label for="formWine1"></label>
+        <input type="number" id="wine1Qty" name="formWine1" value="0" min="1" max="999" required>
         <input type="submit" value="ADD" onclick="addOrder('Golden Orchard',FRUIT_WINE_PRICE[0],'wine1Qty')">
       </form>
 
@@ -82,15 +81,15 @@
       <a href="fruitWine.html" class="more">More Fruit Wine</a>
     </div>
 
-
   </main>
-<div class="order">
-  <h2>Your Order</h2>
-  <button onclick="receipt()">Click to Get Your Receipt</button>
-  <button onclick="clearAll()">Clear All Your Order</button>
-  <div id="order"></div> 
-</div>
- 
+
+  <div class="order">
+    <h2>Your Order</h2>
+    <button onclick="receipt()">Click to Get Your Receipt</button>
+    <button onclick="clearAll()">Clear All Your Order</button>
+    <div id="order"></div>
+  </div>
+
 
   <footer>
     <h4>Images From</h4>

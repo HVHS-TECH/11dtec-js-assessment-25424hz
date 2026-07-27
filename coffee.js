@@ -7,8 +7,7 @@ console.log("Hello world!")
 /************************
 Variables 
 ************************/
-const OUTPUT = document.getElementById("JavaScript");
-const WELCOME_FORM = document.getElementById("welcomeForm");
+const OUTPUT = document.getElementById("coffeeScript");
 const NAME_FIELD = document.getElementById("nameField");
 const BALANCE_FORM = document.getElementById("balanceForm");
 const BALANCE_FIELD = document.getElementById("balanceField");
@@ -16,35 +15,31 @@ const ORDER = document.getElementById("order");
 let shoppingList = [];
 let userName;
 let userBalance;
-const MUFFIN_LIST = ["plain", "chocolate", "blueberry", "banana", "cinnamon"];
-const MUFFIN_PRICE = ["5.49", "6.19", "6.49", "5.89", "5.79"];
 const COFFEE_LIST = ["latte", "cappuccino", "americano", "espresso"];
 const COFFEE_PRICE = ["7.19", "6.99", "5.99", "4.29"];
-const FRUIT_WINE_LIST = ["apple", "grape", "passionfruit", "fig", "grapefruit"];
-const FRUIT_WINE_PRICE = ["11.59", "11.99", "11.79", "13.49", "11.49"];
+
 
 let total = 0;
 
 /************************
  Main Code
 ************************/
-OUTPUT.innerHTML += "<h2 class='title'>Best Recommended! ↖(^ω^)↗</h2>";
-OUTPUT.innerHTML += "<img src='Images/coffee/latte.jpeg' id='coffee4' class='halfWidth' alt='latte'>";
-OUTPUT.innerHTML += "<img src='Images/croissant/ham&cheese.jpg' id='croissant5' class='halfWidth' alt='ham&cheese'>";
-OUTPUT.innerHTML += "<img src='Images/muffin/choc.jpg' id='muffin3' class='halfWidth' alt='goodMuffin'>";
-OUTPUT.innerHTML += "<img src='Images/wine/apple.png' id='wine1' class='halfWidth' alt='goodFruitWine'>";
+OUTPUT.innerHTML += "<img src='Images/coffee/latte.jpeg' id='coffee1' class='halfWidth' alt='latte'>";
+OUTPUT.innerHTML += "<img src='Images/coffee/cappuccino.jpeg' id='coffee2' class='halfWidth' alt='cappucino'>";
+OUTPUT.innerHTML += "<img src='Images/coffee/americano.jpeg' id='coffee3' class='halfWidth' alt='americano'>";
+OUTPUT.innerHTML += "<img src='Images/coffee/espresso.webp' id='coffee4' class='halfWidth' alt='espresso'>";
 OUTPUT.innerHTML += "<h3 class='foodName'>Latte - Morning Mist</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Croissant - Morning Savour</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Muffin - Midnight Cocoa</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Fruit Wine - Golden Orchard</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Cappucino - Velvet Dawn</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Americano - Amber Horizon</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Espresso - Midnight Shot</h3>";
 OUTPUT.innerHTML += "<p class='description'>Smooth espresso blended with silky steamed milk, creating a rich, creamy coffee with a velvety finish.</p>";
-OUTPUT.innerHTML += "<p class='description'>Tender smoked ham nestled in buttery pastry for a warm and satisfying savoury bite.</p>";
-OUTPUT.innerHTML += "<p class='description'>Rich cocoa and melted chocolate folded into a moist muffin for an indulgent treat.</p>";
-OUTPUT.innerHTML += "<p class='description'>Light and refreshing with crisp apple notes and a smooth, delicate finish.</p>";
+OUTPUT.innerHTML += "<p class='description'>Bold espresso paired with steamed milk and a thick layer of velvety foam.</p>";
+OUTPUT.innerHTML += "<p class='description'>Fresh espresso gently blended with hot water for a smooth, full-bodied coffee experience.</p>";
+OUTPUT.innerHTML += "<p class='description'>A concentrated shot of premium espresso with a bold aroma and a lingering finish.</p>";
 price(COFFEE_PRICE[0]);
-price(CROISSANT_PRICE[4]);
-price(MUFFIN_PRICE[2]);
-price(FRUIT_WINE_PRICE[0]);
+price(COFFEE_PRICE[1]);
+price(COFFEE_PRICE[2]);
+price(COFFEE_PRICE[3]);
 
 /*************************
 Functions 
@@ -119,7 +114,7 @@ function receipt() {
         } else {
             ORDER.innerHTML += "<h4>THANK YOU</h4>";
         }
-    } 
+    }
 }
 
 function clearAll() {

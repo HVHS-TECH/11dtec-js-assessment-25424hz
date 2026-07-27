@@ -19,7 +19,16 @@
   <div class="beyond">
     <div class="headForm">
       <img src="Images/croissant.png" alt="croissant">
-      <p>Welcome to the <b>Shed Of Light</b>!</p>
+      <form id="welcomeForm" onsubmit="return false;">
+        <label for="formName">How would you like to be called?</label>
+        <input type="text" id="nameField" name="formName" minlength="3" required>
+        <input type="submit" onclick=nameInput()>
+      </form><br>
+      <form id="balanceForm" onsubmit="return false;">
+        <label for="formBalance">Enter your balance:</label>
+        <input type="number" id="balanceField" name="formBalance" min="0" max="999999" required>
+        <input type="submit" onclick="balanceInput()">
+      </form>
     </div>
     <div class="socials">
       <img src='Images/Ins.png' alt='ins'>
@@ -32,30 +41,52 @@
     <a href="index.html"><img src='Images/favicon.png' alt='logo'></a>
     <h1>Croissant</h1>
     <div class="topRight">
-      <a href="order.html"><img id="trolly" src="Images/trolly.png" alt="trolly" width=10%></a>
       <div class="dropdown">≣
         <nav class="dropdown-content">
+          <a href="index.html" class="homeNav">Home</a>
           <a href="muffin.html">Muffin</a>
           <a href="coffee.html">Coffee</a>
-          <a href="croissant.html">Croissant</a>
           <a href="fruitWine.html">Fruit Wine</a>
         </nav>
       </div>
     </div>
   </header>
   
-  <form onsubmit="return false;">
-
-  </form><br>
-  
-  <div id="CROISSANT">
-
-    The output of your script will go here.
-
+  <div class="script" id="croissantScript">
+    <form class="orderForm" onsubmit="return false;">
+        <label for="formCroissant1"></label>
+        <input type="number" id="croissant1Qty" name="formCroissant1" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Parisian Midnight',CROISSANT_PRICE[0],'croissant1Qty')">
+      </form>
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formCroissant2"></label>
+        <input type="number" id="croissant2Qty" name="formCroissant2" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Almond Whisper',CROISSANT_PRICE[1],'croissant2Qty')">
+      </form>
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formCroissant3"></label>
+        <input type="number" id="croissant3Qty" name="formCroissant3" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Golden Layers',CROISSANT_PRICE[2],'croissant3Qty')">
+      </form>
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formCroissant"></label>
+        <input type="number" id="croissant4Qty" name="formCroissant4" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Cream & Crust',CROISSANT_PRICE[3],'croissant4Qty')">
+      </form>
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formCroissant"></label>
+        <input type="number" id="croissant5Qty" name="formCroissant5" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Morning Savour',CROISSANT_PRICE[4],'croissant5Qty')">
+      </form>
+  </div>
+  <div class="order">
+    <h2>Your CROISSANT Order</h2>
+    <button onclick="receipt()">Click to Get Your CROISSANT Receipt</button>
+    <button onclick="clearAll()">Clear All Your Order</button>
+    <div id="order"></div>
   </div>
 
-
-  <script src="script.js"></script>
+  <script src="croissant.js"></script>
 
 </body>
 

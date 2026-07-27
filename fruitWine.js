@@ -7,8 +7,7 @@ console.log("Hello world!")
 /************************
 Variables 
 ************************/
-const OUTPUT = document.getElementById("JavaScript");
-const WELCOME_FORM = document.getElementById("welcomeForm");
+const OUTPUT = document.getElementById("wineScript");
 const NAME_FIELD = document.getElementById("nameField");
 const BALANCE_FORM = document.getElementById("balanceForm");
 const BALANCE_FIELD = document.getElementById("balanceField");
@@ -16,10 +15,6 @@ const ORDER = document.getElementById("order");
 let shoppingList = [];
 let userName;
 let userBalance;
-const MUFFIN_LIST = ["plain", "chocolate", "blueberry", "banana", "cinnamon"];
-const MUFFIN_PRICE = ["5.49", "6.19", "6.49", "5.89", "5.79"];
-const COFFEE_LIST = ["latte", "cappuccino", "americano", "espresso"];
-const COFFEE_PRICE = ["7.19", "6.99", "5.99", "4.29"];
 const FRUIT_WINE_LIST = ["apple", "grape", "passionfruit", "fig", "grapefruit"];
 const FRUIT_WINE_PRICE = ["11.59", "11.99", "11.79", "13.49", "11.49"];
 
@@ -28,23 +23,26 @@ let total = 0;
 /************************
  Main Code
 ************************/
-OUTPUT.innerHTML += "<h2 class='title'>Best Recommended! ↖(^ω^)↗</h2>";
-OUTPUT.innerHTML += "<img src='Images/coffee/latte.jpeg' id='coffee4' class='halfWidth' alt='latte'>";
-OUTPUT.innerHTML += "<img src='Images/croissant/ham&cheese.jpg' id='croissant5' class='halfWidth' alt='ham&cheese'>";
-OUTPUT.innerHTML += "<img src='Images/muffin/choc.jpg' id='muffin3' class='halfWidth' alt='goodMuffin'>";
-OUTPUT.innerHTML += "<img src='Images/wine/apple.png' id='wine1' class='halfWidth' alt='goodFruitWine'>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Latte - Morning Mist</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Croissant - Morning Savour</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Muffin - Midnight Cocoa</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Fruit Wine - Golden Orchard</h3>";
-OUTPUT.innerHTML += "<p class='description'>Smooth espresso blended with silky steamed milk, creating a rich, creamy coffee with a velvety finish.</p>";
-OUTPUT.innerHTML += "<p class='description'>Tender smoked ham nestled in buttery pastry for a warm and satisfying savoury bite.</p>";
-OUTPUT.innerHTML += "<p class='description'>Rich cocoa and melted chocolate folded into a moist muffin for an indulgent treat.</p>";
-OUTPUT.innerHTML += "<p class='description'>Light and refreshing with crisp apple notes and a smooth, delicate finish.</p>";
-price(COFFEE_PRICE[0]);
-price(CROISSANT_PRICE[4]);
-price(MUFFIN_PRICE[2]);
-price(FRUIT_WINE_PRICE[0]);
+OUTPUT.innerHTML += "<img src='Images/wine/apple.png' id='wine1' class='halfWidth' alt='apple'>";
+OUTPUT.innerHTML += "<img src='Images/wine/grape.jpe' id='wine2' class='halfWidth' alt='grape'>";
+OUTPUT.innerHTML += "<img src='Images/wine/passionfruit.jpeg' id='wine3' class='halfWidth' alt='passionfruit'>";
+OUTPUT.innerHTML += "<img src='Images/wine/fig.png' id='wine4' class='halfWidth' alt='fig'>";
+OUTPUT.innerHTML += "<img src='Images/wine/grapefruit.jpeg' id='wine5' class='halfWidth' alt='grapefruit'>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Apple - Golden Orchard</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Grape - Velvet Vine</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Passionfruit - Sunlit Passion</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Fig - Fig & Ember</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Grapefruit - Citrus Bloom</h3>";
+OUTPUT.innerHTML += "<p class='description'>Crafted from crisp apples, offering delicate sweetness and a refreshing finish.</p>";
+OUTPUT.innerHTML += "<p class='description'>Classic grape wine with rich fruit aromas and a beautifully balanced character.</p>";
+OUTPUT.innerHTML += "<p class='description'>Bright tropical passionfruit flavours with lively acidity and a refreshing finish.</p>";
+OUTPUT.innerHTML += "<p class='description'>Smooth fig wine with mellow sweetness, subtle earthy notes, and remarkable depth.</p>";
+OUTPUT.innerHTML += "<p class='description'>Refreshing grapefruit wine with vibrant citrus aromas and a pleasantly crisp finish.</p>";
+price(WINE_PRICE[0]);
+price(WINE_PRICE[1]);
+price(WINE_PRICE[2]);
+price(WINE_PRICE[3]);
+price(WINE_PRICE[4]);
 
 /*************************
 Functions 

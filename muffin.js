@@ -7,8 +7,7 @@ console.log("Hello world!")
 /************************
 Variables 
 ************************/
-const OUTPUT = document.getElementById("JavaScript");
-const WELCOME_FORM = document.getElementById("welcomeForm");
+const OUTPUT = document.getElementById("muffinScript");
 const NAME_FIELD = document.getElementById("nameField");
 const BALANCE_FORM = document.getElementById("balanceForm");
 const BALANCE_FIELD = document.getElementById("balanceField");
@@ -18,33 +17,32 @@ let userName;
 let userBalance;
 const MUFFIN_LIST = ["plain", "chocolate", "blueberry", "banana", "cinnamon"];
 const MUFFIN_PRICE = ["5.49", "6.19", "6.49", "5.89", "5.79"];
-const COFFEE_LIST = ["latte", "cappuccino", "americano", "espresso"];
-const COFFEE_PRICE = ["7.19", "6.99", "5.99", "4.29"];
-const FRUIT_WINE_LIST = ["apple", "grape", "passionfruit", "fig", "grapefruit"];
-const FRUIT_WINE_PRICE = ["11.59", "11.99", "11.79", "13.49", "11.49"];
 
 let total = 0;
 
 /************************
  Main Code
 ************************/
-OUTPUT.innerHTML += "<h2 class='title'>Best Recommended! ↖(^ω^)↗</h2>";
-OUTPUT.innerHTML += "<img src='Images/coffee/latte.jpeg' id='coffee4' class='halfWidth' alt='latte'>";
-OUTPUT.innerHTML += "<img src='Images/croissant/ham&cheese.jpg' id='croissant5' class='halfWidth' alt='ham&cheese'>";
-OUTPUT.innerHTML += "<img src='Images/muffin/choc.jpg' id='muffin3' class='halfWidth' alt='goodMuffin'>";
-OUTPUT.innerHTML += "<img src='Images/wine/apple.png' id='wine1' class='halfWidth' alt='goodFruitWine'>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Latte - Morning Mist</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Croissant - Morning Savour</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Muffin - Midnight Cocoa</h3>";
-OUTPUT.innerHTML += "<h3 class='foodName'>Fruit Wine - Golden Orchard</h3>";
-OUTPUT.innerHTML += "<p class='description'>Smooth espresso blended with silky steamed milk, creating a rich, creamy coffee with a velvety finish.</p>";
-OUTPUT.innerHTML += "<p class='description'>Tender smoked ham nestled in buttery pastry for a warm and satisfying savoury bite.</p>";
+OUTPUT.innerHTML += "<img src='Images/muffin/plain.jpeg' id='muffin1' class='halfWidth' alt='plain'>";
+OUTPUT.innerHTML += "<img src='Images/muffin/choc.jpg' id='muffin2' class='halfWidth' alt='chocolate'>";
+OUTPUT.innerHTML += "<img src='Images/muffin/blueberry.jpg' id='muffin3' class='halfWidth' alt='blueberry'>";
+OUTPUT.innerHTML += "<img src='Images/muffin/banana.jpg' id='coffee4' class='halfWidth' alt='banna'>";
+OUTPUT.innerHTML += "<img src='Images/muffin/cinnamon.jpeg' id='coffee5' class='halfWidth' alt='cinnamon'>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Plain - Morning Glow</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Chocolate - Midnight Cocoa</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Blueberry - Blue Meadow</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Banana - Autumn Spice</h3>";
+OUTPUT.innerHTML += "<h3 class='foodName'>Cinnamon - Morning Savour</h3>";
+OUTPUT.innerHTML += "<p class='description'>Freshly baked with creamy butter and a soft, fluffy crumb. A timeless classic for every moment.</p>";
 OUTPUT.innerHTML += "<p class='description'>Rich cocoa and melted chocolate folded into a moist muffin for an indulgent treat.</p>";
-OUTPUT.innerHTML += "<p class='description'>Light and refreshing with crisp apple notes and a smooth, delicate finish.</p>";
-price(COFFEE_PRICE[0]);
-price(CROISSANT_PRICE[4]);
+OUTPUT.innerHTML += "<p class='description'>Bursting with juicy blueberries, bringing a sweet and refreshing flavour in every bite.</p>";
+OUTPUT.innerHTML += "<p class='description'>Made with ripe bananas for a naturally sweet taste and a wonderfully tender texture.</p>";
+OUTPUT.innerHTML += "<p class='description'>Infused with warm cinnamon spice and baked until golden for a comforting homemade favourite.</p>"
+price(MUFFIN_PRICE[0]);
+price(MUFFIN_PRICE[1]);
 price(MUFFIN_PRICE[2]);
-price(FRUIT_WINE_PRICE[0]);
+price(MUFFIN_PRICE[3]);
+price(MUFFIN_PRICE[4]);
 
 /*************************
 Functions 

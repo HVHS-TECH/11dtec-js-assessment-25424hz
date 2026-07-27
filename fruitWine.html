@@ -19,7 +19,16 @@
   <div class="beyond">
     <div class="headForm">
       <img src="Images/wine.png" alt="fruit_wine">
-      <p>Welcome to the <b>Shed Of Light</b>!</p>
+      <form id="welcomeForm" onsubmit="return false;">
+        <label for="formName">How would you like to be called?</label>
+        <input type="text" id="nameField" name="formName" minlength="3" required>
+        <input type="submit" onclick=nameInput()>
+      </form><br>
+      <form id="balanceForm" onsubmit="return false;">
+        <label for="formBalance">Enter your balance:</label>
+        <input type="number" id="balanceField" name="formBalance" min="0" max="999999" required>
+        <input type="submit" onclick="balanceInput()">
+      </form>
     </div>
     <div class="socials">
       <img src='Images/Ins.png' alt='ins'>
@@ -32,30 +41,47 @@
     <a href="index.html"><img src='Images/favicon.png' alt='logo'></a>
     <h1>Fruit Wine</h1>
     <div class="topRight">
-      <a href="order.html"><img id="trolly" src="Images/trolly.png" alt="trolly" width=10%></a>
       <div class="dropdown">≣
         <nav class="dropdown-content">
+          <a href="index.html" class="homeNav">Home</a>
           <a href="muffin.html">Muffin</a>
           <a href="coffee.html">Coffee</a>
-          <a href="croissant.html">Croissant</a>
-          <a href="fruitWine.html">Fruit Wine</a>
+          <a href="wine.html">wine</a>
         </nav>
       </div>
     </div>
   </header>
   
-  <form onsubmit="return false;">
-
-  </form><br>
-  
-  <div id="FRUIT_WINE">
-
-    The output of your script will go here.
-
+  <div class="script" id="wineScript">
+    <form class="orderForm" onsubmit="return false;">
+        <label for="formWine1"></label>
+        <input type="number" id="wine1Qty" name="formwine1" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Parisian Midnight',WINE_PRICE[0],'wine1Qty')">
+      </form>
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formWine2"></label>
+        <input type="number" id="wine2Qty" name="formwine2" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Almond Whisper',WINE_PRICE[1],'wine2Qty')">
+      </form>
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formWine3"></label>
+        <input type="number" id="wine3Qty" name="formwine3" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Golden Layers',WINE_PRICE[2],'wine3Qty')">
+      </form>
+      <form class="orderForm" onsubmit="return false;">
+        <label for="formWine4"></label>
+        <input type="number" id="wine4Qty" name="formwine4" value="0" min="1" max="999" required>
+        <input type="submit" value="ADD" onclick="addOrder('Cream & Crust',WINE_PRICE[3],'wine4Qty')">
+      </form>
   </div>
-
-
-  <script src="script.js"></script>
+  <div class="order">
+    <h2>Your WINE Order</h2>
+    <button onclick="receipt()">Click to Get Your WINE Receipt</button>
+    <button onclick="clearAll()">Clear All Your Order</button>
+    <div id="order"></div>
+  </div>
+  
+  <script src="fruitWine.js"></script>
 
 </body>
 

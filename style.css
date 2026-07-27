@@ -7,7 +7,7 @@ body {
     display: flex;
     margin: 1%;
     padding: 1% 2%;
-    gap: 1%;
+    gap: 1%; 
     background-color: #a16900;
     color: rgb(238, 248, 255);
     text-align: flex-start;
@@ -115,8 +115,7 @@ header a{
     display: flex;
     flex-direction: column;
 }
-
-#JavaScript {
+.script {
     display: grid; 
     margin: 1%;
     padding: 1%;
@@ -126,6 +125,8 @@ header a{
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, minmax(1vw, auto));
+    text-decoration: none;
+    cursor:none;
 }
 .halfWidth {
     grid-row: 2;
@@ -143,6 +144,9 @@ header a{
 }
 .description {
     grid-row: 4;
+}
+.price {
+    grid-row: 5;
 }
 .orderForm {
     display: flex;
